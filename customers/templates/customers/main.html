@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    {% for customer in object_list %}
+        {{customer}}
+        <a href="{% url 'customers:customer-pdf-view' customer.pk %}"><button class="btn btn-primary">PDF</button></a>
+        <br>
+    {% endfor %}
+{% endblock content %}
