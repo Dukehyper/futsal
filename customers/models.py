@@ -1,13 +1,43 @@
 from django.db import models
 
 # Create your models here.
+class Logo(models.Model):
+    logo = models.ImageField()
+
 class Customer(models.Model):
     name= models.CharField(max_length=200)
-    logo= models.ImageField()
-    description= models.TextField()
-    updated= models.DateTimeField(auto_now=True)
-    created= models.DateTimeField(auto_now_add=True)
+    contact = models.CharField(max_length=100)
+    ground = models.CharField(max_length=50)
+    shift = models.CharField(max_length=50)
 
     def __str__(self):
         return str(self.name)
+ 
+class Feedback(models.Model):
+    name=models.CharField(max_length=200)
+    email=models.EmailField()
+    subject=models.CharField(max_length=100)
+    message=models.CharField(max_length=1000)
+    def __str__(self):
+        return self.name
     
+
+class Ground(models.Model):
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+    
+class Shift(models.Model):
+    time = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.time
+    
+    
+
+# class Hello(models.Model):
+#     name = models.CharField(max_length=100)
+#     contact = models.CharField(max_length=100)
+#     def __str__(self):
+#         return str(self.name)

@@ -1,13 +1,32 @@
+{% load static %}
+
 <html>
 <head>
 <meta cahrset='utf-8'>
-
+<style>
+    p{
+        text-align: center;
+    }
+    span{
+        font-size: 30px;
+        text-align: center;
+    }
+    
+</style>
 
 </head>
 <body>
-    {{customer}}
+<div style="background-color: #ffc339; margin-bottom: 15px;">
+    <div style="padding-left: 300px;">
+    <img src="C:\Users\aalok\OneDrive\Desktop\pdf\pdf_proj\static\customers\image\logo.png" alt="My image" height="100px" width="100px">
+    </div>
+</div>
+<p><span> <b>Danfe Futsal</b> </span><br> Itahari, Sunsari, Nepal </p>
     <hr>
-    {{customer.description}}
+     {{customer}}
+    <button class="btn btn-primary">dasdasd</button>
+    {{customer.contact}}
+    <h1>welcome to danfe futsal</h1>
 </body>
 
 </html>

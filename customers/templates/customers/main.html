@@ -8,3 +8,17 @@
         <br>
     {% endfor %}
 {% endblock content %}
+
+
+<form action="" method="post">
+    {% csrf_token %}
+    name : <input type="text" name="name" id="">
+    contact: <input type="text" name="contact" id="">
+    <select name="ground" id="">
+        {% for ground in grounds %}
+            <option value="{{ground.id}}">{{ground.name}}</option>
+        {% endfor %}
+    </select>
+    
+    <input type="submit" value="" name="submit">
+</form>
