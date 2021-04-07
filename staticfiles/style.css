@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 100%;
+    font-family: sans-serif;
+}
+
+div, section, span, ul, li, a, header{
+    box-sizing: border-box;
+}
+
+/*css reset*/
+
+/* header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+} */
+
+/* #menu li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+    margin-top: 0px;
+}
+
+#menu li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+} */
+
+section{
+    width: 100%;
+    float: left;
+    height: 100vh;
+    position: relative;
+}
+
+#home{
+   background-color: #F17843;
+ 
+}
+
+#book{
+     background-color: #ED6663;
+}
+
+#gallery{
+     background-color: #B52B65;
+}
+
+#about{
+     background-color: #3C2C3E;
+}
+
+#contact{
+     background-color: #B52B65;
+}
+
+h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+.video-background {
+    width: 100%;
+    position: absolute;
+    align-self: center;
+    display: flex;
+    overflow-x: hidden;
+    padding-top: 85px !important;
+    
+}
+.form{
+    min-height: 100vh;
+    /* margin-top: 150px; */
+}
+/* .logo-slider .item{
+    background-color: #fff;
+    box-shadow: 0 4px 5px #cacaca;
+    border-radius: 8px;
+    padding: 15px;
+    border: 2px solid #111;
+}
+.logo-slider .slick-slide{
+    margin:15px;
+    
+}
+.slick-dots li.slick-active button:before{
+    color:#ff5722;
+}
+.sliick-dots li button:before{
+    font-size: 12px;
+}
+.slick-next:before,
+.slick-prev:before{
+    color: #ff8159;
+    font-size: 24px;
+}
+.item:hover{
+    display: block;
+    transition: all ease 0.3s;
+    transform: scale(1.1) translateY(-5px);
+} */
+
+
+
+
+
+

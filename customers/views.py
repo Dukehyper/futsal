@@ -53,14 +53,14 @@ def render_pdf_view(request):
        return HttpResponse('We had some errors <pre>' + html + '</pre>')
     return response
 
-def contactform(request):
-   if request.method == "POST":
-      name = request.POST['name']
-      contact = request.POST['contact']
-      new_data = Customer.objects.create(name=name, contact=contact)
-      new_data.save()
+# def contactform(request):
+#    if request.method == "POST":
+#       name = request.POST['name']
+#       contact = request.POST['contact']
+#       new_data = Customer.objects.create(name=name, contact=contact)
+#       new_data.save()
 
-   return render(request, 'customers/contactform.html')
+#    return render(request, 'customers/contactform.html')
 
 def contact(request):
    context = {
@@ -81,20 +81,19 @@ def contact(request):
             'grounds' : Ground.objects.all(),
             'shifts' : Shift.objects.all(),
          }
-         return render(request, 'customers/contact.html', context1)
-      
+         return render(request, 'customers/index.html', context1)
       
       else:
          new_data = Customer.objects.create(name=name, contact=contact, ground=ground, shift=shift)
          new_data.save()
-   return render(request, 'customers/contact.html', context)
+   return render(request, 'customers/index.html', context)
 
 def feedback(request):
    if request.method == "POST":
-      name=request.POST['name']
+      fb_name=request.POST['fb_name']
       email=request.POST['email']
       subject=request.POST['subject']
       message=request.POST['message']
-      new_data=Feedback.objects.create(name=name,email=email,subject=subject,message=message)
+      new_data=Feedback.objects.create(fb_name=fb_name,email=email,subject=subject,message=message)
       new_data.save()
-   return render(request,'customers/feedback.html')
+   return render(request,'customers/index.html')

@@ -9,12 +9,11 @@ class Customer(models.Model):
     contact = models.CharField(max_length=100)
     ground = models.CharField(max_length=50)
     shift = models.CharField(max_length=50)
-
     def __str__(self):
         return str(self.name)
  
 class Feedback(models.Model):
-    name=models.CharField(max_length=200)
+    fb_name=models.CharField(max_length=200)
     email=models.EmailField()
     subject=models.CharField(max_length=100)
     message=models.CharField(max_length=1000)

@@ -9,8 +9,8 @@ admin.site.register(Logo)
 
 
 class FeedbackAdmin(admin.ModelAdmin):
-    list_display = ('id','name','email','subject','message',)
-    list_display_link = ('id','name,')
+    list_display = ('id','fb_name','email','subject','message',)
+    list_display_link = ('id','fb_name,')
 
 admin.site.register(Feedback, FeedbackAdmin)
 
