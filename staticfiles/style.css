@@ -16,6 +16,11 @@ div, section, span, ul, li, a, header{
     box-sizing: border-box;
 }
 
+.nav-hover a:hover{
+    color: #f0ad4e !important;
+}
+
+
 /*css reset*/
 
 /* header{

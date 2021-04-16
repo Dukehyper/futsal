@@ -1,8 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Logo(models.Model):
-    logo = models.ImageField()
+
 
 class Customer(models.Model):
     name= models.CharField(max_length=200)
@@ -23,7 +22,7 @@ class Feedback(models.Model):
 
 class Ground(models.Model):
     name = models.CharField(max_length=50)
-
+    price=models.CharField(max_length=10)
     def __str__(self):
         return self.name
     
