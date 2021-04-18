@@ -133,11 +133,7 @@ iframe {
   min-height: 100%;
   padding: 15px;
 
-  background: #009bff;
-  background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
-  background: -o-linear-gradient(left, #0072ff, #00c6ff);
-  background: -moz-linear-gradient(left, #0072ff, #00c6ff);
-  background: linear-gradient(left, #0072ff, #00c6ff);
+  background: #fff;
 
   display: -webkit-box;
   display: -webkit-flex;
@@ -187,7 +183,7 @@ iframe {
 .contact1-form-title {
   display: block;
   font-family: Montserrat-ExtraBold;
-  font-size: 24px;
+  font-size: 32px;
   color: #333333;
   line-height: 1.2;
   text-align: center;

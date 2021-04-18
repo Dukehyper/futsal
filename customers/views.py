@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.template.loader import get_template
 from xhtml2pdf import pisa
 from django.views.generic import ListView
-from .models import Customer, Ground, Shift, Feedback
+from .models import Customer, Ground, Shift, Feedback, Gallery, Notice
 
 
 class CustomerListview(ListView):
@@ -66,6 +66,8 @@ def contact(request):
    context = {
       'grounds' : Ground.objects.all(),
       'shifts' : Shift.objects.all(),
+      'gallery' : Gallery.objects.all(),
+      'notice' : Notice.objects.all()
    }
    if request.method == 'POST' and 'booked' in request.POST:
       error = ""
@@ -83,6 +85,8 @@ def contact(request):
             'grounds' : Ground.objects.all(),
             'shifts' : Shift.objects.all(),
             'booked' : booked,
+            'gallery' : Gallery.objects.all(),
+            'notice' : Notice.objects.all()
          }
          return render(request, 'customers/index.html', context1)
       else:
@@ -94,6 +98,8 @@ def contact(request):
             'grounds' : Ground.objects.all(),
             'shifts' : Shift.objects.all(),
             'booked' : booked,
+            'gallery' : Gallery.objects.all(),
+            'notice' : Notice.objects.all()
             # 'customer' : Customer.objects.filter().order_by('-pk')[0]
             # 'customer' : Customer.objects.get().order_by('-pk')[0]
          }
