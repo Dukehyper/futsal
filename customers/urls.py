@@ -9,5 +9,5 @@ urlpatterns = [
     # path('test/',render_pdf_view, name='test-view'),
     path('pdf/<pk>/', customer_render_pdf_view, name='customer-pdf-view'),
    
-    path('', views.contact, name="home"),
+    path('', views.home, name="home"),
 ]

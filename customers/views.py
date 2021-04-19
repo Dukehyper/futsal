@@ -62,12 +62,12 @@ def customer_render_pdf_view(request,*args,**kwargs):
 
 #    return render(request, 'customers/contactform.html')
 
-def contact(request):
+def home(request):
    context = {
       'grounds' : Ground.objects.all(),
       'shifts' : Shift.objects.all(),
       'gallery' : Gallery.objects.all(),
-      'notice' : Notice.objects.all()
+      'notice' : Notice.objects.filter().order_by('-pk')[:2]
    }
    if request.method == 'POST' and 'booked' in request.POST:
       error = ""
@@ -86,7 +86,7 @@ def contact(request):
             'shifts' : Shift.objects.all(),
             'booked' : booked,
             'gallery' : Gallery.objects.all(),
-            'notice' : Notice.objects.all()
+            'notice' : Notice.objects.filter().order_by('-pk')[:2]
          }
          return render(request, 'customers/index.html', context1)
       else:
@@ -99,7 +99,7 @@ def contact(request):
             'shifts' : Shift.objects.all(),
             'booked' : booked,
             'gallery' : Gallery.objects.all(),
-            'notice' : Notice.objects.all()
+            'notice' : Notice.objects.filter().order_by('-pk')[:2]
             # 'customer' : Customer.objects.filter().order_by('-pk')[0]
             # 'customer' : Customer.objects.get().order_by('-pk')[0]
          }

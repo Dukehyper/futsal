@@ -20,3 +20,7 @@ class CustomerAdmin(admin.ModelAdmin):
     list_display_link = ('id','name,')
 
 admin.site.register(Customer, CustomerAdmin)
+
+admin.site.site_header = 'Danfe Futsal'                   
+admin.site.index_title = 'Welcome to Danfe Futsal'  
+admin.site.site_title = 'Danfe Futsal Dashboard' 
