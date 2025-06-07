@@ -1,0 +1,92 @@
+/* Base styles */
+body {
+    font-family: 'Lexend', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    background: #fff;
+    color: #000;
+    margin: 0;
+    padding-top: 60px; /* space for fixed nav */
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 1000;
+}
+.skip-link:focus {
+    left: 10px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #eee;
+    padding: 10px;
+}
+nav ul.breadcrumb {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+nav ul.breadcrumb li {
+    display: inline;
+    margin-right: 5px;
+}
+nav .controls {
+    float: right;
+}
+nav .controls button {
+    margin-left: 5px;
+}
+
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Dyslexia friendly mode */
+.dyslexia-mode {
+    font-family: 'OpenDyslexic', 'Lexend', Arial, sans-serif;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+}
+
+/* High contrast */
+.high-contrast {
+    background: #000;
+    color: #fff;
+}
+.high-contrast a { color: #0ff; }
+
+/* Sepia mode */
+.sepia {
+    background: #f4f4d4;
+    color: #333;
+}
+
+/* Gradient guide */
+.gradient-guide .content {
+    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0.15), rgba(0, 0, 255, 0.15));
+    background-size: 100% 2.4em;
+    background-repeat: repeat-y;
+}
+
+/* Focus outline for keyboard navigation */
+:focus {
+    outline: 3px solid #ff9500;
+}
+
+@media (min-width: 1280px) {
+    body { font-size: 18px; }
+}
+@media (min-width: 1920px) {
+    body { font-size: 20px; }
+}
